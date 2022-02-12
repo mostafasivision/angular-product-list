@@ -14,7 +14,11 @@
 
   <button type="button" (click)="share()">Share</button>
 
-  <app-product-alerts [product]="product" (notify)="onNotify()">
+  <app-product-alerts [product]="product" (notifyParent)="onNotify()">
+    <!-- 
+      because  the app-product-alerts take input forom parent [product] is defined and pass to it the Product from parent
+      notifyParent is emited when the user click Notify me then the function onNotify() will be called
+    -->
   </app-product-alerts>
 </div>
 <!-- 
